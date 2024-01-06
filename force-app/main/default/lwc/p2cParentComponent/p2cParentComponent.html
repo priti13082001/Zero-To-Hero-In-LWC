@@ -1,0 +1,20 @@
+<template>
+    <c-p2c-alert-child-component 
+     message="hurry!! data is found"
+     number=20
+     is-valid=false
+    ></c-p2c-alert-child-component>
+    <div class="slds-var-m-around_medium"></div>
+    <c-p2c-carousel-component carousel-details={carouseldata}>
+    </c-p2c-carousel-component>
+
+    <div class="slds-var-m-around_medium"></div>
+    <Lightning-card title="Parent to child on click of Action">
+
+        <div class="slds-var-m-around_medium"></div>
+    <lightning-input type="number" name="input1" label="Enter percentage" onkeyup={handleClick} ></lightning-input>
+     <c-p2c-progress-component
+     percentage={percentageValue}></c-p2c-progress-component>
+    </Lightning-card>
+
+</template>

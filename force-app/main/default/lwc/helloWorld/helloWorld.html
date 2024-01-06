@@ -1,0 +1,43 @@
+<template>
+    <lightning-card  title="fundamental of LWC">
+        <lightning-input type="text" label="Enter your Name" onkeyup={handleclick}></lightning-input>
+        <p class="slds-p-horizontal_small">hello my name is {fullName} </p>
+     
+        
+    </lightning-card>
+    <lightning-card  title="@ track properties">
+        <lightning-input type="text" label="Enter your country Name" onkeyup={handleAddress}></lightning-input>
+       
+        <p class="slds-p-horizontal_small">i love my {address.city}</p>
+        
+    </lightning-card>
+    <lightning-card  title="@ Getter Method in LWC">
+        <!-- <lightning-input type="Number" label="Enter your first Number"></lightning-input> -->
+        <!-- <lightning-input type="Number" label="Enter your Second Number" ></lightning-input> -->
+        <div>Rusult :{sumOfTwoNumber}</div>
+        
+    </lightning-card>
+    
+   
+    <lightning-card  title="Condtional Rendereing ">
+
+        <lightning-button variant="brand" label="Show Data" title="Click this" onclick={handleSecret} class="slds-m-left_x-small"></lightning-button>
+        <template if:true={isVisible}>
+            <div>Very Merry Christmas</div>
+
+        </template>
+       
+        
+    </lightning-card>
+   
+    <lightning-card  title="template looping ">
+       <template for:each={countryName} for:item="country"> 
+        <ul key={country} class="slds-has-dividers_around-space">
+            <li class="slds-item"> {country}</li>
+          
+            </ul>
+       </template>
+        
+    </lightning-card>
+    
+</template>

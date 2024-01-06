@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Recod form Component ">
+        <lightning-record-form
+        object-api-name={objectName}
+        fields={feildList}
+        onsuccess={successHandler}
+        ></lightning-record-form>
+
+    </lightning-card>
+    <lightning-card title="in view form of lightinging-record-form ">
+        <lightning-record-form
+        record-id="0011y00000lHOe4AAG"
+        object-api-name={objectName}
+        fields={feildList}
+        mode="view"
+        ></lightning-record-form>
+
+    </lightning-card>
+
+<lightning-card title="Display record in ReadOnly mode using lightinging-record-form ">
+    <lightning-record-form
+    record-id="0011y00000lHOe4AAG"
+    object-api-name={objectName}
+    fields={feildList}
+    mode="readonly"
+    ></lightning-record-form>
+  </lightning-card>
+
+  <lightning-card title="Edit  record using lightinging-record-form ">
+    <lightning-record-form
+    record-id="0011y00000lHOe4AAG"
+    object-api-name={objectName}
+    fields={feildList}
+    mode="edit"
+    columns="2"
+    ></lightning-record-form>
+  </lightning-card>
+  <lightning-card title="Edit  record of lightinging-record-form using layout  ">
+    <lightning-record-form
+    record-id="0011y00000lHOe4AAG"
+    object-api-name={objectName}
+    mode="edit"
+    columns="2"
+    layout-type="Full"
+    ></lightning-record-form>
+  </lightning-card>
+
+</template>
